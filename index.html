@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array calculator</title>
+    <style>
+         #div2{
+        padding-bottom:50px;
+          padding-left:5px;
+          padding-right:5px;
+          padding-top:30px;         
+      }
+      #div1{
+          background-color: black;
+          margin-top:60px;
+          margin-left: 450px;
+          width: 340px;
+          border-radius:10px; 
+      }
+      th{
+          background-color:white;
+          color: black;
+      }
+      #eq{
+          background-color: rgb(224, 122, 49);
+          color: white;
+      }
+      .operand{
+           color: rgb(224, 122, 49);
+      }
+    </style>
+</head>
+<body>
+    <div align="center" id="div1">
+    <div align="center" id="div2" >
+        <table cellpadding="20px" border="1" rules="all">
+             <input type="text" id="resultstatus" style="height:40px; width:317px;color:black;background-color: white;">                                   
+            <tr> <th onclick="recreate('c')" class="operand">C</th>  <th onclick="addmathfun('log(')" class="operand">log</th>  <th onclick="addmathfun('sin(')" class="operand">sin</th> <th onclick="addmathfun('cos(')" class="operand" >cos</th>  <th onclick="recreate('del')" class="operand">DEL</th> </tr>
+            <tr> <th onclick="addnum('7')">7</th> <th onclick="addnum('8')">8</th> <th onclick="addnum('9')">9</th>      <th onclick="addmathfun('tan(')" class="operand">tan</th>   <th onclick="addoperation('/')" class="operand">/</th>   </tr>
+            <tr> <th onclick="addnum('4')">4</th> <th onclick="addnum('5')">5</th> <th onclick="addnum('6')">6</th>      <th onclick="addmathfun('rut(')" class="operand">root</th>  <th onclick="addoperation('*')" class="operand">*</th>    </tr>
+            <tr> <th onclick="addnum('1')">1</th> <th onclick="addnum('2')">2</th> <th onclick="addnum('3')">3</th>      <th onclick="addmathfun('sqr(')" class="operand">sqr</th>   <th onclick="addoperation('-')" class="operand">-</th>    </tr>
+            <tr> <th onclick="addnum('0')">0</th> <th onclick="addnum('.')" class="operand">.</th> <th onclick="closebrac(')')" class="operand">)</th>   <th onclick="recreate('=')" id="eq">=</th>                  <th onclick="addoperation('+')" class="operand">+</th>     </tr>
+        </table>
+    </div>
+    </div>
+    <script>
+        var result="";
+        var i=0;
+        var answer=document.querySelector('#resultstatus');
+        var temp=100;
+
+        function addnum(num){
+            result+=num;
+            answer.value=result;
+        }
+
+        function addoperation(operartion){
+                if(result[result.length-1]=='+' || result[result.length-1]=='-' || result[result.length-1]=='/' || result[result.length-1]=='*' ){
+                   result=result.substring(0,result.length-1);
+                   result+=operartion;
+                   answer.value=result;
+                }else{
+                    result+=operartion;
+                    answer.value=result;
+                }
+                if( result[result.length-1]=='('){
+                    result=result.substring(0,result.length-1);
+                    answer.value=result;
+                }
+
+            }
+        
+
+        function addmathfun(mathparameter){
+            if(status[status.length-1]==")"){
+                result+='*';
+                answer.value=result;
+            }
+
+            
+            if(result=="" || checklastsign()){
+                if(temp==100){
+                temp=result.length;
+                console.log(temp);
+                }
+            result+=mathparameter;
+            answer.value=result;
+            }
+                
+
+        }
+
+        function recreate(recreator){
+            switch(recreator){
+                  case 'del':result="";;
+                  answer.value=result; 
+                  break;
+                  case 'c':result=result.substring(0,result.length-1);
+                  answer.value=result; 
+                  break;
+                  case '=': try{result=eval(result);
+                    answer.value=result;  }
+                  catch(err){alert(err.message);}
+                  break;
+            }
+        }
+
+
+        function closebrac(brac){
+            var mathop=result.substring(temp+4);
+            var check=result.substring(temp,temp+3);
+            result=result.substring(0,temp);
+            // console.log(mathop);
+            // console.log(result);
+            // console.log(check);
+            switch(check){
+                case 'sin': mathop=Math.sin(mathop * Math.PI/180); console.log(mathop );
+                    break;
+                case 'cos': mathop=Math.cos(mathop * Math.PI/180); console.log(mathop );
+                    break;
+                case 'tan': mathop=Math.tan(mathop * Math.PI/180); console.log(mathop );
+                    break;
+                case 'log': mathop=Math.log(mathop ); console.log(mathop );
+                    break;
+                case 'sqr': mathop=mathop*mathop; console.log(mathop );
+                    break;
+                case 'rut': mathop=Math.sqrt(mathop); console.log(mathop );
+                    break;
+            }
+            result+=mathop;
+            answer.value=result;
+            temp=100;
+        }
+
+
+
+
+
+        function checklastsign(){
+            if(result[result.length-1]=='+' || result[result.length-1]=='-' || result[result.length-1]=='/' || result[result.length-1]=='*'  ){
+                return 1;
+            }
+            else{
+                return 0;
+            }
+        }
+
+    </script>
+</body>
+</html>
