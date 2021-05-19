@@ -56,6 +56,9 @@
         }
 
         function addoperation(operartion){
+                 if(result[result.length-1]=="."){
+                    result=result.substring(0,result.length-1);
+                }
                 if(result[result.length-1]=='+' || result[result.length-1]=='-' || result[result.length-1]=='/' || result[result.length-1]=='*' ){
                    result=result.substring(0,result.length-1);
                    result+=operartion;
