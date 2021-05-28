@@ -1,0 +1,214 @@
+<html>
+<head>
+    <title>Document</title>
+    <style>
+       #quiz,#result{
+           margin-left: 35%;
+           margin-right:35%;
+           margin-top: 15%;
+           padding: 2%;
+           background-color: white;
+           border-radius: 2%;
+       }
+       #submit{
+           margin-left: 48%;
+           margin-right: 48%;
+           background-color: white;
+           border-radius: 2%;
+           margin-top: 1%;
+       }
+       input{
+           margin:3%;
+       }
+       button{
+           margin-left: 20%;
+       }
+       #button2{
+           margin-left: 65%;
+       }
+    </style>
+</head>
+<body background="black-abstract-black-background-orange-wallpaper-preview.jpg" text="gray">
+    <div id="quiz">
+        <div id="quizcontainer">
+        <h2>1. what is the full form ram ?</h2>
+        <input type="radio" name="quiz1"  value="1" onclick="quizfun(this)" > <b> ranom and memory</b> <br>
+        <input type="radio" name="quiz1"  value="2" onclick="quizfun(this)"> <b> read access memory</b>  <br>
+        <input type="radio" name="quiz1"  value="3" onclick="quizfun(this)"> <b> random access memory</b>  <br>
+        <input type="radio" name="quiz1"  value="4" onclick="quizfun(this)"> <b> None of the above</b> <br><br><br>
+               <button type="button" onclick="tonext()" id="button2">Next</button>
+        </div> 
+    </div> 
+    <input type="button" onclick="submitquiz()" value="Submit" id="submit" > 
+  
+<script>
+        var answer=[3,1,4,3];
+        var useranswer=[0,0,0,0];
+        ansAt=0;
+        var question=["1. what is the full form ram ?"   ,"2. what is the full form cd?" ,"3. what is the full form cpu ?" ,"4.what is the full form off API"     ];
+        var choice1=["ranom and memory"     ,"compact disk"    ,"central pre unit"     , " application programming interaction"  ];
+        var choice2=["read access memory"   ,"create drive"    ,"center pre unit"       ," android progrmming interact"];
+        var choice3=["random access memory" ,"compact dirt"    ,"center process user"   , "application programming interface" ];
+        var choice4=["None of the above"    ,"compact drive"   ,"central processing unit" , "application performance interface"];
+     function quizfun( val){
+         useranswer[ansAt]=val.value;
+     }
+
+     function toprev(){
+         ansAt--;
+         if(ansAt<0){
+             ansAt=0;
+         }
+         createquizquestion();
+    }
+     function tonext(){
+         ansAt++;
+         if(ansAt>answer.length-1){
+             ansAt=answer.length-1;
+         }
+        createquizquestion();
+     }
+
+     function createquizquestion(){
+        var outercontainer=document.getElementById('quiz');
+         var oldquizcontainer=document.getElementById('quizcontainer');
+         oldquizcontainer.remove();
+         
+         var quizcontainer=document.createElement('div');
+         quizcontainer.setAttribute('id','quizcontainer');
+         var que=document.createElement('h2');
+         que.innerText=question[ansAt];
+         quizcontainer.appendChild(que);
+
+         var choices1=document.createElement('input');
+         choices1.setAttribute('type','radio');
+         choices1.setAttribute('name','quiz');
+         choices1.setAttribute('onclick','quizfun(this)');
+         choices1.setAttribute('value','1');
+         quizcontainer.appendChild(choices1);
+         var choicee1=document.createElement('b');
+         choicee1.innerText=choice1[ansAt];
+         quizcontainer.appendChild(choicee1);
+         var breaks1=document.createElement('br');
+         quizcontainer.appendChild(breaks1);
+
+         var choices2=document.createElement('input');
+         choices2.setAttribute('type','radio');
+         choices2.setAttribute('name','quiz');
+         choices2.setAttribute('onclick','quizfun(this)');
+         choices2.setAttribute('value','2');
+         quizcontainer.appendChild(choices2);
+         var choicee2=document.createElement('b');
+         choicee2.innerText=choice2[ansAt];
+         quizcontainer.appendChild(choicee2);
+         var breaks2=document.createElement('br');
+         quizcontainer.appendChild(breaks2);
+
+         var choices3=document.createElement('input');
+         choices3.setAttribute('type','radio');
+         choices3.setAttribute('name','quiz');
+         choices3.setAttribute('onclick','quizfun(this)');
+         choices3.setAttribute('value','3');
+         quizcontainer.appendChild(choices3);
+         var choicee3=document.createElement('b');
+         choicee3.innerText=choice3[ansAt];
+         quizcontainer.appendChild(choicee3);
+         var breaks3=document.createElement('br');
+         quizcontainer.appendChild(breaks3);
+
+         var choices4=document.createElement('input');
+         choices4.setAttribute('type','radio');
+         choices4.setAttribute('name','quiz');
+         choices4.setAttribute('onclick','quizfun(this)');
+         choices4.setAttribute('value','4');
+         quizcontainer.appendChild(choices4);
+         var choicee4=document.createElement('b');
+         choicee4.innerText=choice4[ansAt];
+         quizcontainer.appendChild(choicee4);
+         var breaks4=document.createElement('br');
+         quizcontainer.appendChild(breaks4);
+         var breaks5=document.createElement('br');
+         quizcontainer.appendChild(breaks5);
+         var breaks6=document.createElement('br');
+         quizcontainer.appendChild(breaks6);
+
+        if(ansAt!=0){
+            var btn1=document.createElement('button');
+         btn1.setAttribute('type','button');
+         btn1.setAttribute('onclick','toprev()');
+         btn1.innerText="Previous";
+         quizcontainer.appendChild(btn1);
+        }
+
+        if(ansAt!=answer.length-1){
+                     var btn2=document.createElement('button');
+         btn2.setAttribute('type','button');
+         btn2.setAttribute('onclick','tonext()');
+         btn2.innerText="next";
+         if(ansAt==0){
+             btn2.setAttribute('id','button2');
+         }
+         quizcontainer.appendChild(btn2);
+        }
+
+         if(useranswer[ansAt]!=0){
+             switch(useranswer[ansAt]){
+                 case '1':   choices1.setAttribute('checked','checked');
+                         break;
+                 case '2':    choices2.setAttribute('checked','checked');
+                         break;                
+                 case '3':   choices3.setAttribute('checked','checked');
+                         break;                 
+                 case '4':    choices4.setAttribute('checked','checked');
+                         break;
+
+             }
+         }
+
+         outercontainer.appendChild(quizcontainer);
+     }
+     
+     function submitquiz(){
+         var result=0;
+         for(var i=0;i<answer.length;i++){
+             if(answer[i]==useranswer[i]){
+                 result++;
+             }
+         }
+         var outercontainer=document.getElementById('quiz');
+         var oldquizcontainer=document.getElementById('quizcontainer');
+         oldquizcontainer.remove();
+         var submitbtn=document.getElementById('submit');
+         submitbtn.remove();
+         var results=document.createElement('div');
+         results.setAttribute('id','result');
+         var resultnum=document.createElement('h1');
+         var finalresult=result *100/answer.length;
+         resultnum.innerText=`${finalresult}%`;
+         if(finalresult<34){
+             resultnum.style.color='red';
+         }
+         else if(finalresult<60){
+             resultnum.style.color='green'
+         }
+         else{
+             resultnum.style.color='blue'
+         }
+         results.appendChild(resultnum);
+         outercontainer.appendChild(results);
+         var image=document.createElement('img');
+
+         if(finalresult>70){
+            image.src='pass2.jpg';
+         }
+         else{
+            image.src='faill2.jpg';
+         }
+         outercontainer.appendChild(image);
+
+     }
+     
+
+    </script>
+</body>
+</html>
