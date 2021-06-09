@@ -1,0 +1,68 @@
+<html>
+<head>
+    <title>Document</title>
+    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <style>
+        #grad{
+            background-image: linear-gradient(#ffffff,rgb(234 163 100),#ffffff);
+        }
+    </style>
+</head>
+<body id="grad">
+   <nav class="navbar navbar-inverse" >
+    <div class="container-fluid">
+       <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-target="#myNavbar" data-toggle="collapse" >
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+             <a href="#" class="navbar-brand">
+                 <img src="man.jpg" alt="mandsaur">
+             </a>
+       </div>
+       <div class="collapse navbar-collapse" id="myNavbar">
+           <ul class="nav navbar-nav">
+               <li ><a href="#">Home</a></li>
+               <li><a href="#">About us</a></li>
+               <li class="dropdown">
+                   <a href="#" data-toggle="dropdown">
+                       Product
+                       <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li ><a href="#">product 1</a></li>
+                        <li ><a href="#">product 2</a></li>
+                        <li ><a href="#">product 3</a></li>
+                        <li ><a href="#">product 4</a></li>
+                    </ul>
+                </li>
+               <li><a href="#">Contact</a></li>
+           </ul>
+       </div>
+    </div>
+   </nav> 
+
+
+
+   <div class="container" >
+       <div class="row">
+            <div class="col-sm-12 col-xs-12 col-md-5 col-lg-5" > <img src="mandsaur uni/MU-recognized-as-host-institute-22-jan-2020-2.jpg" alt="" class="img-responsive"> </div>
+            <div class="col-sm-12 col-xs-12 col-md-2 col-lg-2"  style="height: 10%;"></div>
+            <div class="col-sm-12 col-xs-12 col-md-5 col-lg-5" > <img src="mandsaur uni/MU091019DG_Digital-Placement-slider-01.jpg" alt="" class="img-responsive" > </div>
+            <div class="col-sm-12 col-xs-12 col-md-12 col-lg-12" style="height: 10%;"></div>
+       </div>
+       <div class="row">
+        <div class="col-sm-12 col-xs-12 col-md-5 col-lg-5"> <img src="mandsaur uni/IMG-20200825-WA0001.jpg" alt=""  class="img-responsive" > </div>
+        <div class="col-sm-12 col-xs-12 col-md-2 col-lg-2"  style="height: 10%;"></div>
+        <div class="col-sm-12 col-xs-12 col-md-5 col-lg-5" > <img src="mandsaur uni/Web-Baaners-21.04.2021-C.jpg" alt=""  class="img-responsive" > </div>
+       </div>
+   </div>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+   
+
+</body>
+</html>
