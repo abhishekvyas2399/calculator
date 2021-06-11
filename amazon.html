@@ -155,7 +155,29 @@
        </div>
 
 
-
+<script>
+    var signin=document.getElementById("sign_in");
+    var rewards=document.getElementById("rewards");
+    var responsivehead=document.getElementById("responsivehead");
+        if(window.innerWidth<=1000){
+            signin.remove();
+            rewards.remove();
+        }
+        else if(window.innerWidth>1000){
+            responsivehead.appendChild(signin);
+            responsivehead.appendChild(rewards);
+        }
+    window.addEventListener('resize',function(){
+        if(window.innerWidth<=1000){
+            signin.remove();
+            rewards.remove();
+        }
+        else if(window.innerWidth>1000){
+            responsivehead.appendChild(signin);
+            responsivehead.appendChild(rewards);
+        }
+    });
+</script>
 
 
 
