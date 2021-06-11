@@ -159,20 +159,20 @@
     var signin=document.getElementById("sign_in");
     var rewards=document.getElementById("rewards");
     var responsivehead=document.getElementById("responsivehead");
-        if(window.innerWidth<=1000){
+        if(window.innerWidth<=1100){
             signin.remove();
             rewards.remove();
         }
-        else if(window.innerWidth>1000){
+        else if(window.innerWidth>1100){
             responsivehead.appendChild(signin);
             responsivehead.appendChild(rewards);
         }
     window.addEventListener('resize',function(){
-        if(window.innerWidth<=1000){
+        if(window.innerWidth<=1100){
             signin.remove();
             rewards.remove();
         }
-        else if(window.innerWidth>1000){
+        else if(window.innerWidth>1100){
             responsivehead.appendChild(signin);
             responsivehead.appendChild(rewards);
         }
