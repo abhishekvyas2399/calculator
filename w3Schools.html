@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W3schools</title>
+    <style>
+        body{
+    margin: 0 ;
+    padding: 0 ;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+p{
+    margin: 0;
+    padding: 9px;
+    font-size: 15px;
+}
+
+
+/* *********************************************<!--   header   --> ******************************************** */
+#header{
+font-family: sans-serif;
+font-size: 15.5px;
+font-weight: 600;
+letter-spacing: 0.4px;
+display: flex;
+background-color: white;
+}
+#header a{
+padding:14px 14px 16px 27px ;
+}
+.header_subheading{
+padding: 30px 24px 15px 24px !important;
+display: none;
+}
+.header_subheading:hover{
+background-color: #04aa6d;
+}
+#header_right_1{
+margin: 17px 32px 17px 32px !important;
+padding:12px 41px 12px 41px !important;
+border-radius: 30px;
+position: absolute;
+background: #04aa6d;
+color: white;
+right: 0px;
+top: 0px;
+}
+#header_right_2{
+margin: 17px 32px 17px 32px !important;
+padding:12px 20px 12px 20px !important;
+border-radius: 30px;
+position: absolute;
+display: none;
+right: 150px;
+top: 0px;
+}
+#header_right_2:hover{
+background: #04aa6d;
+color: white;
+}
+
+@media screen and (max-width:600px){
+#Menu{
+    display: block;
+}
+}
+@media screen and (min-width:600px){
+#tuto{
+    display: block;
+}
+#ref{
+    display: block;
+}
+}
+
+@media screen and (min-width:700px){
+#header_right_2{
+    display: block;
+}
+}
+
+
+@media screen and (min-width:991px){
+#ex{
+    display: block;
+}
+}
+
+
+
+/* ******************************************************************************************************************** */
+
+
+
+
+/********************************************* <!-- whole body of page --> ****************************************************/
+
+#homepage_wholebody{
+}
+
+/********************************************** <!-- body header --> *********************************************/
+#homepage_body_header{
+    position:sticky;
+    top: 0px;
+    width: 100%;
+    display: flex;
+    background: #282a35;
+    color: white;
+    padding: 0.001px;
+}
+#homepage_body_header a{
+    padding: 11.5px 17px 11.5px 17px ;
+    display: none;
+}
+#homepage_body_header_right_3{
+    display: block !important;
+    position: absolute;
+    right: 110px;
+}
+#homepage_body_header_right_2{
+    display: block !important;
+    position: absolute;
+    right: 60px;
+}
+#homepage_body_header_right_1{
+    display: block !important;
+    position: absolute;
+    right: 0px;
+}
+
+
+@media screen and (max-width:991px) {
+    #homepage_body_header_0{
+        display: block !important;
+    }
+    #navbar{
+        display: none !important;
+    }
+    #tutorial_body{
+        margin-left: 0px !important;
+        width: 100% !important;
+    }
+    #tutorial_body_left{
+        float: none;
+        width: 100% !important;
+    }
+    #tutorial_body_right{
+        float: none;
+        width: 98% !important;
+    }
+}
+
+@media screen and (min-width:50px) {
+    #homepage_body_header_1{
+        display: block !important;
+    }
+}
+ @media screen and  (min-width:50px) {
+    #homepage_body_header_2{
+        display: block !important;
+    }
+}
+@media screen and  (min-width:480px) {
+    #homepage_body_header_3{
+        display: block !important;
+    }
+}
+@media screen and  (min-width:650px) {
+    #homepage_body_header_4{
+        display: block !important;
+    }
+}
+@media screen and  (min-width:700px) {
+    #homepage_body_header_5{
+        display: block !important;
+    }
+}
+@media screen and  (min-width:770px) {
+    #homepage_body_header_6{
+        display: block !important;
+    }
+}
+@media screen and  (min-width:810px) {
+    #homepage_body_header_7{
+        display: block !important;
+    }
+    
+}
+@media screen and  (min-width:930px) {
+    #homepage_body_header_8{
+        display: block !important;
+    }
+}
+@media screen and  (min-width:991px) {
+    #homepage_body_header_9{
+        display: block !important;
+    }
+}
+@media screen and  (min-width:1098px) {
+    #homepage_body_header_10{
+        display: block !important;
+    }
+}
+@media screen and  (min-width:1150px) {
+    #homepage_body_header_11{
+        display: block !important;
+    }
+}
+@media screen and  (min-width:1250px) {
+    #homepage_body_header_12{
+        display: block !important;
+    }
+} 
+@media screen and  (min-width:1334px) {
+    #homepage_body_header_13{
+        display: block !important;
+    }
+} 
+@media screen and  (min-width:1398px) {
+    #homepage_body_header_14{
+        display: block !important;
+    }
+} 
+@media screen and  (min-width:1414px) {
+    #homepage_body_header_15{
+        display: block !important;
+    }
+} 
+
+/************************************** <!-- navbar --> ******************************************************/
+#navbar{
+    display: flex;
+    flex-direction: column;
+
+    /* float: left; */
+    overflow-y: scroll ;
+    position: fixed;
+    float: left;
+    top: 125px;
+    width: 220px;
+    height: 92.9% !important;           /*height: 570px;*/
+    background: whitesmoke;
+
+}
+#navbar div{
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+}
+#navbar div h3,#navbar div h2{
+    margin: 0;
+    padding-top: 10px;
+    font-weight: 500;
+}
+#navbar div a{
+    margin: 0;
+    padding-top: 5px;
+    font-weight: 400;
+}
+#navbar div a:hover{
+    background: rgb(226, 223, 223);
+}
+
+
+/*************************************************<!-- tutorial -->***************************************************/
+
+/* #tutorial_body{
+    margin-left: 230px;
+    max-width: 90%;
+    width: inherit;
+    display: grid;
+    grid-template-columns: 80% 15%;
+}
+
+#tutorial_body_left{
+    color: purple;
+}
+#tutorial_body_right{
+    color: aqua;
+}
+#footer{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    color: rosybrown;
+} */
+
+
+
+
+
+
+
+
+
+
+#tutorial_body{
+    margin-left: 230px;
+    /* max-width: 80%;
+    min-width:50%; */
+}
+
+#tutorial_body_left{
+    float: left;
+    width: 84.5%;
+    padding: 15px 0;
+    border-right: 1px solid lightgray;
+}
+#tutorial_body_right{
+    float: left;
+    width: 12%;
+    padding: 15px 1%;
+}
+#footer{
+    width: inherit;
+    clear: both;
+}
+
+
+
+
+
+
+
+
+/****************************************************** Tutorial left *****************************************************/
+
+
+#tutorial_body_left_advertisement{
+    height: 100px;
+    width: 89%;
+    margin: 10px 4% 0px;
+    padding: 0;
+}
+
+#tutorial_body_left_heading{
+    margin: 0;
+    padding: 5px 0;
+    font-size: 40px;
+    margin: 10px 25px;
+}
+#tutorial_body_left_buttons{
+    margin: 10px 15px;
+    padding: 0;
+}
+#tutorial_body_left_buttons div{
+    background: #04aa6d;
+    color: white;
+    width: 50px;
+    margin: 0px 10px;
+    padding: 13px 25px;
+    border-radius: 7px;
+    font-weight: 600;
+}
+#homebtn{
+    float: left;
+}
+#nextbtn{
+    float: right;
+}
+
+#tutorial_body_left_box_1{
+    margin:80px 0;
+    padding: 30px 17px;
+    background: rgba(127, 255, 212, 0.3);
+    clear: both;
+}
+
+#tutorial_body_left_box_1 div{
+    font-size: 15px;
+    background: #04aa6d;
+    color: white;
+    width: 200px;
+    margin: 10px 10px;
+    padding: 13px 20px;
+    border-radius: 7px;
+    font-weight: 600;
+}
+
+#tutorial_body_left_subheadings{
+    font-size: 30px;
+    margin: 0;
+    font-weight: 300;
+    padding: 5px 0;
+    margin: 10px 25px;
+}
+#tutorial_body_left_subheadings+p,
+#tutorial_body_left_subheadings+p+p{
+    padding: 9px 0 9px 25px;
+    margin: 0;
+}
+
+
+#tutorial_body_left_codecontainer{
+    background: whitesmoke;
+    margin: 10px;
+    padding: 0 0 10px 12px;
+    border-radius: 10px;
+}
+#tutorial_body_left_codecontainer_heading{
+    padding: 9px 0 9px 25px;
+    margin: 9px 0 9px 0;
+    font-size: 25px;
+}
+#tutorial_body_left_codecontainer_in{
+    padding: 9px 0 9px 25px;
+    margin:0 20px 0 9px ;
+    background: white;
+    border-left: 4px solid #04aa6d;
+}
+#in1{
+    padding: 3px 0 3px 0;
+    margin: 0;
+}
+#in2{
+    padding: 3px 0 3px 25px;
+    margin: 0;
+}
+#tutorial_body_left_codecontainer_btn{
+    background: #04aa6d;
+    color: white;
+    width: 140px;
+    margin: 15px 10px;
+    padding: 10px 15px;
+    border-radius: 7px;
+    font-weight: 600;
+}
+#tutorial_body_left_codecontainer_hint{
+    font-weight: 600;
+    margin-left: 15px;
+}
+
+#tutorial_body_left_subsubheading{
+    font-size: 25px;
+    margin-left: 25px;
+}
+#tutorial_body_left_paras+hr{
+    width: 90%;
+}
+#tutorial_body_left_paras{
+    font-size: 15px;
+    margin-left: 25px;
+    margin:15px 0 20px 25px;
+}
+#tutorial_body_left_advertisement__{
+    height: 400px;
+}
+#tutorial_body_left_Exercisebtn{
+    background: #04aa6d;
+    color: white;
+    width: 170px;
+    margin: 15px 25px;
+    padding: 10px 15px;
+    border-radius: 7px;
+    font-weight: 600;
+}
+#tutorial_body_left_quizbtn{
+    background: #2196f3;
+    color: white;
+    width: 170px;
+    margin: 15px 25px;
+    padding: 10px 15px;
+    border-radius: 7px;
+    font-weight: 600;
+}
+#tutorial_body_left_links{
+    margin-left: 25px;
+    text-decoration: underline;
+}
+#tutorial_body_left_ourcertified_course{
+    margin: 30px;
+    padding:  60px 40px;
+    border-radius: 15px;
+    background: #282A35;
+}
+#ourcertified_course_head{
+    font-size: 40px;
+    font-weight: 550;
+    color: #FFC0C7;
+    margin: 25px;
+}
+#ourcertified_course_p{
+    font-size: 30px;
+    font-weight: 500;
+    color: #FFC0C7;
+    margin: 25px;
+    
+}
+#ourcertified_course_btn{
+    background: #04aa6d;
+    color: white;
+    width: 140px;
+    margin: 15px 25px;
+    padding:  15px 25px;
+    border-radius: 20px;
+    font-weight: 600;
+    text-align: center;
+}
+@media screen and (max-width:600px) {
+    #ourcertified_course_btn{
+        width:76%;
+        margin: 15px 6%;
+        padding:  15px 6%;
+    }
+    #ourcertified_course_p{
+        font-size: 20px;
+    }
+    #ourcertified_course_head{
+        font-size: 30px;
+    }
+}
+
+
+
+
+
+/* ***************************************       footer         **************************************** */
+#footer_advertisement_last{
+    height: 200px;
+    clear: both;
+    border-bottom: 1px solid lightgray;
+    border-top: 1px solid lightgray;
+}
+#footer_end_buttons{
+    width: 100%;
+    justify-content: space-between;
+}
+#footer_end_buttons p{
+    background: whitesmoke;
+    /* width: 100px; */
+    float: left;
+    width: 20%;
+    padding:  10px 1%;
+    margin: 10px  1.5%;
+    border-radius: 5px;
+    font-weight: 400;
+    text-align: center;
+}
+@media screen and (max-width:600px) {
+    #footer_end_buttons p{
+        width: 94%;
+    }
+}
+#footer_end_buttons p:hover{
+    background: rgb(206, 204, 204);
+}
+#footer_enddiv{
+    margin: 0;
+    margin-top: 28px;
+    float: left;
+    width: 24%;
+    padding: 0;
+    text-align: center;
+}
+@media screen and (max-width:991px) {
+    #footer_enddiv{
+        width:50%;
+    }
+}
+@media screen and (max-width:600px) {
+    #footer_enddiv{
+        width:100%;
+    }
+}
+#footer_enddiv_heads{
+    font-size: 18px !important;
+    font-weight: 300;
+}
+#footer_enddiv p{
+    margin: 0;
+    font-size: 13px;
+    text-align: center;
+    padding: 0;
+}
+#foooter_getcertified{
+    background: #282A35;
+    color: white;
+    float: right;
+    width: 100px;
+    padding:  10px 5px;
+    margin: 25px;
+    border-radius: 5px;
+    font-weight: 400;
+    text-align: center;
+}
+#footer_end{
+    font-size: 13px;
+    color: gray;
+    clear: right;
+    text-align: center;
+    padding: 10px 0;
+    border-top: 1px solid lightgray;
+}
+#footer_logo{
+    border-top: 1px solid lightgray;
+    text-align: center;
+    padding: 10px;
+}
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <!--   header   -->
+    <div id="header"> 
+        <a> <img src="w3logo.png" > </a>
+        <a class="header_subheading" id="Menu">Menu</a>
+        <a class="header_subheading" id="tuto">Tutorials</a>
+        <a class="header_subheading" id="ref">References</a>
+        <a class="header_subheading" id="ex">Exercises</a>
+        <a  id="header_right_2">Paid Course</a>
+        <a  id="header_right_1"> Log in </a>
+    </div>
+
+     <!-- whole body of page -->
+     <div id="homepage_wholebody">
+         <!-- body header -->
+         <div id="homepage_body_header">
+             <a id="homepage_body_header_0" onclick="menubar()"> menubar</a>
+             <a id="homepage_body_header_1"><img src="homeicon.png" alt=""></a>
+             <a id="homepage_body_header_2">HTML</a>
+             <a id="homepage_body_header_3">CSS</a>
+             <a id="homepage_body_header_4">JAVASCRIPT</a>
+             <a id="homepage_body_header_5">SQL</a>
+             <a id="homepage_body_header_6">PYTHON</a>
+             <a id="homepage_body_header_7">PHP</a>
+             <a id="homepage_body_header_8">BOOTSTRAP</a>
+             <a id="homepage_body_header_9">HOW TO</a>
+             <a id="homepage_body_header_10">W3.CSS</a>
+             <a id="homepage_body_header_11">JAVA</a>
+             <a id="homepage_body_header_12">JQUERY</a>
+             <a id="homepage_body_header_13">C++</a>
+             <a id="homepage_body_header_14">C#</a>
+             <a id="homepage_body_header_15">R</a>
+             <a id="homepage_body_header_right_3"><img src="modeicon.png" alt=""></a>
+             <a id="homepage_body_header_right_2"><img src="languageicon.png" alt=""></a>
+             <a id="homepage_body_header_right_1"><img src="searchicon.png" alt=""></a>
+         </div>
+            <!-- navbar -->
+        <div id="navbar">
+
+            <div>
+                <h2>CSS Tutorial</h2>
+                <a>CSS HOME</a>
+                <a>CSS Introduction</a>
+                <a>CSS Syntax</a>
+                <a>CSS Selectors</a>
+                <a>CSS How To</a>
+                <a>CSS Comments</a>
+                <a>CSS Colors</a>
+                <a>CSS Backgrounds
+                <a>CSS Borders</a>
+                <a>CSS Margins</a>
+                <a>CSS Padding</a>
+                <a>CSS Height/Width</a>
+                <a>CSS Box Model</a>
+                <a>CSS Outline</a>
+                <a>CSS Text</a>
+                <a>CSS Fonts</a>
+                <a>CSS Icons</a>
+                <a>CSS Links</a>
+                <a>CSS Lists</a>
+                <a>CSS Tables</a>
+                <a>CSS Display</a>
+                <a>CSS Max-width</a>
+                <a>CSS Position</a>
+                <a>CSS Overflow</a>
+                <a>CSS Float</a>
+                <a>CSS Inline-block</a>
+                <a>CSS Align</a>
+                <a>CSS Combinators</a>
+                <a>CSS Pseudo-class</a>
+                <a>CSS Pseudo-element</a>
+                <a>CSS Opacity</a>
+                <a>CSS Navigation Bar</a>
+                <a>CSS Dropdowns</a>
+                <a>CSS Image Gallery</a>
+                <a>CSS Image Sprites</a>
+                <a>CSS Attr Selectors</a>
+                <a>CSS Forms</a>
+                <a>CSS Counters</a>
+                <a>CSS Website Layout</a>
+                <a>CSS Units</a>
+                <a>CSS Specificity</a>
+                <a>CSS !important</a>
+            </div>
+
+
+            <div>
+                <h3>CSS Advanced</h3>
+                <a>CSS Rounded Corners</a>
+                <a>CSS Border Images</a>
+                <a>CSS Backgrounds</a>
+                <a>CSS Colors</a>
+                <a>CSS Color Keywords</a>
+                <a>CSS Gradients</a>
+                <a>CSS Shadows</a>
+                <a>CSS Text Effects</a>
+                <a>CSS Web Fonts</a>
+                <a>CSS 2D Transforms</a>
+                <a>CSS 3D Transforms</a>
+                <a>CSS Transitions</a>
+                <a>CSS Animations</a>
+                <a>CSS Tooltips</a>
+                <a>CSS Style Images</a>
+                <a>CSS Image Reflection</a>
+                <a>CSS object-fit</a>
+                <a>CSS object-position</a>
+                <a>CSS Buttons</a>
+                <a>CSS Pagination</a>
+                <a>CSS Multiple Columns</a>
+                <a>CSS User Interface</a>
+                <a>CSS Variables</a>
+                <a>CSS Box Sizing</a>
+                <a>CSS Media Queries</a>
+                <a>CSS MQ Examples</a>
+                <a>CSS Flexbox</a>
+            </div>
+
+
+            <div>
+                <h3>CSS Responsive</h3>
+                <a>RWD Intro</a>
+                <a>RWD Viewport</a>
+                <a>RWD Grid View</a>
+                <a>RWD Media Queries</a>
+                <a>RWD Images</a>
+                <a>RWD Videos</a>
+                <a>RWD Frameworks</a>
+                <a>RWD Templates</a>
+            </div>
+
+
+            <div>
+                <h3>CSS Grid</h3>
+                <a>Grid Intro</a>
+                <a>Grid Container</a>
+                <a>Grid Item</a>
+            </div>
+
+
+            <div>
+                <h3>CSS SASS</h3>
+                <a>SASS Tutorial</a>
+            </div>
+
+
+            <div>
+                <h3>CSS Examples</h3>
+                <a>CSS Templates</a>
+                <a>CSS Examples</a>
+                <a>CSS Quiz</a>
+                <a>CSS Exercises</a>
+                <a>CSS Certificate</a>
+            </div>
+
+
+            <div>
+                <a>CSS References</a>
+                <a>CSS Reference</a>
+                <a>CSS Selectors</a>
+                <a>CSS Functions</a>
+                <a>CSS Reference Aural</a>
+                <a>CSS Web Safe Fonts</a>
+                <a>CSS Animatable</a>
+                <a>CSS Units</a>
+                <a>CSS PX-EM Converter</a>
+                <a>CSS Colors</a>
+                <a>CSS Color Values</a>
+                <a>CSS Default Values</a>
+                <a>CSS Browser Support</a>
+            </div>
+
+
+        </div>
+
+        <!-- tutorial -->
+        <div id="tutorial_body">
+            <div id="tutorial_body_left">
+                <div id="tutorial_body_left_advertisement">
+                    
+                </div>
+                <p  id="tutorial_body_left_heading">CSS Tutorial</p>
+                <div id="tutorial_body_left_buttons">
+                    <div id="homebtn">Home</div>
+                    <div id="nextbtn">Next</div>
+                </div>
+                <div id="tutorial_body_left_box_1">
+                    <p>CSS is the language we use to style an HTML document.</p>
+                    <p>CSS describes how HTML elements should be displayed.</p>
+                    <p>This tutorial will teach you CSS from basic to advanced.</p>
+                    <div>start learning CSS now</div>
+                </div>
+                <p id="tutorial_body_left_subheadings" >Examples in Each Chapter</p>
+                <p>This CSS tutorial contains hundreds of CSS examples.</p>
+                <p>With our online editor, you can edit the CSS, and click on a button to view the result.</p>
+
+                <div id="tutorial_body_left_codecontainer">
+                    <p id="tutorial_body_left_codecontainer_heading"> CSS Examples</p>
+                    <div id="tutorial_body_left_codecontainer_in">
+                        <p id="in1" > <font color="brown">body</font> { </p>
+                            <p id="in2" >  <font color="red">background-color:</font>  <font color="blue">lightblue;</font></p>
+                        <p id="in1" >}</p><br>
+                            
+                        <p id="in1" ><font color="brown">h1</font> {</p>
+                            <p id="in2" >  <font color="red">color:</font>  <font color="blue">white;</font></p>
+                            <p id="in2" >  <font color="red">text-align:</font>  <font color="blue">center;</font></p>
+                        <p id="in1" >}</p><br>
+                            
+                        <p id="in1" ><font color="brown">p</font>{</p>
+                            <p id="in2" >  <font color="red">font-family:</font>  <font color="blue">verdana;</font></p>
+                            <p id="in2" >  <font color="red">font-size:</font>  <font color="blue">20px;</font></p>
+                        <p id="in1" >}</p><br>
+                    </div>
+                    <p id="tutorial_body_left_codecontainer_btn">Try it yourself</p>
+                </div>
+                <p id="tutorial_body_left_codecontainer_hint">Click on the "Try it Yourself" button to see how it works.</p>
+                <hr>
+                <p id="tutorial_body_left_subsubheading">CSS Examples</p>
+                <p id="tutorial_body_left_paras">Learn from over 300 examples! With our editor, you can edit the CSS, and click on a button to view the result.</p>
+                <p id="tutorial_body_left_paras">Go to CSS Examples!</p>
+                <hr>
+                <p id="tutorial_body_left_subsubheading" >Use the Menu</p>
+                <p id="tutorial_body_left_paras">We recommend reading this tutorial, in the sequence listed in the menu.</p>
+                <p id="tutorial_body_left_paras">If you have a large screen, the menu will always be present on the left.</p>
+                <p id="tutorial_body_left_paras">If you have a small screen, open the menu by clicking the top menu sign ☰.</p>
+                <hr>
+                <p id="tutorial_body_left_subsubheading" >CSS Templates</p>
+                <p id="tutorial_body_left_paras">We have created some responsive W3.CSS templates for you to use.</p>
+                <p id="tutorial_body_left_paras">You are free to modify, save, share, and use them in all your projects.</p>
+                <p id="tutorial_body_left_paras">Free CSS Templates!</p>
+                <hr>
+                <div id="tutorial_body_left_advertisement__"></div>
+                
+                <p id="tutorial_body_left_subsubheading" >CSS Exercises and Quiz Test</p>
+                <p id="tutorial_body_left_paras" >Test your CSS skills at W3Schools!</p>
+
+                <p id="tutorial_body_left_Exercisebtn">Start CSS Exercise!</p>
+                <p id="tutorial_body_left_quizbtn">Start CSS Quiz</p>
+
+                <p id="tutorial_body_left_subsubheading">CSS References</p>
+                <p id="tutorial_body_left_paras" >At W3Schools you will find complete CSS references of all properties and selectors with syntax, examples, browser support, and more.</p>
+                <p id="tutorial_body_left_links" >CSS Properties Reference</p>
+                <p id="tutorial_body_left_links" >CSS Selectors Reference</p>
+                <p id="tutorial_body_left_links" >CSS Functions Reference</p>
+                <p id="tutorial_body_left_links" >CSS Animatable Reference</p>
+                <p id="tutorial_body_left_links" >CSS Aural Reference</p>
+                <p id="tutorial_body_left_links" >CSS Units</p>
+                <p id="tutorial_body_left_links" >CSS Color Reference</p>
+                <p id="tutorial_body_left_links" >CSS Default Values</p>
+                <p id="tutorial_body_left_links" >CSS Browser Support</p>
+
+                <div id="tutorial_body_left_ourcertified_course">
+                    <p id="ourcertified_course_head">Kickstart your career</p>
+                    <p id="ourcertified_course_p">Get certified by completing the CSS course</p>
+                    <p id="ourcertified_course_btn">Get certified</p>
+                </div>
+                <div id="tutorial_body_left_buttons">
+                    <div id="homebtn">Home</div>
+                    <div id="nextbtn">Next</div>
+                </div>
+
+            </div >
+
+
+            <div id="tutorial_body_right">
+            </div>
+
+
+            <div id="footer">
+                <div id="footer_advertisement_last"></div>
+                <div id="footer_end_buttons">
+                    <p >Report Error</p>
+                    <p>Forum</p>
+                    <p>About</p>
+                    <p>Shop</p>
+                </div>
+                <div></div>
+                    <div id="footer_enddiv">
+                        <p id="footer_enddiv_heads">Top Tutorials</p>
+                        <p>HTML Tutorial</p>
+                        <p>CSS Tutorial</p>
+                        <p>JavaScript Tutorial</p>
+                        <p>How To Tutorial</p>
+                        <p>SQL Tutorial</p>
+                        <p>Python Tutorial</p>
+                        <p>Bootstrap Tutorial</p>
+                        <p>PHP Tutorial</p>
+                        <p>Java Tutorial</p>
+                        <p>C++ Tutorial</p>
+                        <p>jQuery Tutorial</p>
+                    </div>
+
+                    <div id="footer_enddiv">
+                        <p id="footer_enddiv_heads">Top References</p>
+                        <p>HTML Reference</p>
+                        <p>CSS Reference</p>
+                        <p>JavaScript Reference</p>
+                        <p>SQL Reference</p>
+                        <p>Python Reference</p>
+                        <p>W3.CSS Reference</p>
+                        <p>Bootstrap Reference</p>
+                        <p>PHP Reference</p>
+                        <p>HTML Colors</p>
+                        <p>Java Reference</p>
+                        <p>Angular Reference</p>
+                        <p>jQuery Reference</p>
+                    </div>
+
+
+                    <div id="footer_enddiv">
+                        <p id="footer_enddiv_heads">Top Examples</p>
+                        <p>HTML Examples</p>
+                        <p>CSS Examples</p>
+                        <p>JavaScript Examples</p>
+                        <p>How To Examples</p>
+                        <p>SQL Examples</p>
+                        <p>Python Examples</p>
+                        <p>W3.CSS Examples</p>
+                        <p>Bootstrap Examples</p>
+                        <p>PHP Examples</p>
+                        <p>Java Examples</p>
+                        <p>XML Examples</p>
+                        <p>jQuery Examples</p>
+                    </div>
+
+                    <div id="footer_enddiv">
+                        <p id="footer_enddiv_heads">Web Courses</p>
+                        <p>HTML Course</p>
+                        <p>CSS Course</p>
+                        <p>JavaScript Course</p>
+                        <p>Front End Course</p>
+                        <p>SQL Course</p>
+                        <p>Python Course</p>
+                        <p>PHP Course</p>
+                        <p>jQuery Course</p>
+                        <p>Java Course</p>
+                        <p>C++ Course</p>
+                        <p>C# Course</p>
+                        <p>XML Course</p>
+                    </div>
+
+                <p id="foooter_getcertified">Get certified</p>
+                <p align="justify" id="footer_end">W3Schools is optimized for learning and training. Examples might be simplified to improve reading and learning. Tutorials, references, and examples are constantly reviewed to avoid errors, but we cannot warrant full correctness of all content. While using W3Schools, you agree to have read and accepted our terms of use, cookie and privacy policy.</p>
+                <p align="justify" id="footer_end">Copyright &#169 1999-2021 by Refsnes Data. All Rights Reserved.W3Schools is Powered by W3.CSS.</p>
+                <div id="footer_logo"><img src="w3logo.png" ></div>
+            </div>
+        </div>
+    
+     </div>
+
+<script>
+    document.addEventListener('scroll',navbarposition);
+window.addEventListener('resize',menubar2);
+
+
+
+
+
+// *************************************************  set navbar position when scroll *******************************************************************
+function navbarposition(){
+    openorclose=1;    
+    if(window.scrollY<=79){
+        document.getElementById('navbar').setAttribute('style',`top:${126-window.scrollY}px !important`);
+        document.getElementById('homepage_body_header').setAttribute('style','position:static;');
+    }
+    else{
+        document.getElementById('navbar').setAttribute('style',`top:${126-79}px !important`)
+        document.getElementById('homepage_body_header').setAttribute('style','position:fixed;');
+    }
+}
+
+
+
+
+
+
+//******************************************    open navbar onclick   ********************************************************** */
+var openorclose=0;
+function menubar(){
+    if(openorclose==0){
+        if(window.scrollY<79){
+            document.getElementById('navbar').setAttribute('style',`display:block !important;top:${126-window.scrollY}px !important;`);
+            document.getElementById('homepage_body_header').setAttribute('style','position:static;');
+        }
+        else{
+            document.getElementById("navbar").setAttribute('style',`display:block !important;top:${126-79}px !important;`);
+            document.getElementById('homepage_body_header').setAttribute('style','position:fixed;');
+        }
+        // document.getElementById("tutorial_body").setAttribute('style','margin-left:230px !important;max-width:90% !important;min-width:50%; !important')
+        openorclose=1;
+    }
+    else{
+        document.getElementById("navbar").setAttribute('style','display:none !important;');
+        // document.getElementById("tutorial_body").setAttribute('style','margin-left:0px !important;max-width:100% !important;')
+        openorclose=0;
+    }
+}
+
+
+
+
+
+
+// *************************************       set navbar on resize      ********************************************
+function menubar2(){
+    if(window.innerWidth>991){
+        if(window.scrollY<79){
+            document.getElementById('navbar').setAttribute('style',`display:block !important;top:${126-window.scrollY}px !important;`);
+            document.getElementById('homepage_body_header').setAttribute('style','position:static;');
+        }
+        else{
+            document.getElementById("navbar").setAttribute('style',`display:block !important;top:${126-79}px !important;`);
+            document.getElementById('homepage_body_header').setAttribute('style','position:fixed;');
+        }
+        // document.getElementById("tutorial_body").setAttribute('style','margin-left:230px !important;max-width:90% !important;')
+    }
+    else{
+        document.getElementById("navbar").setAttribute('style','display:none !important;');
+    }
+}
+
+
+
+</script>
+
+</body>
+</html>
