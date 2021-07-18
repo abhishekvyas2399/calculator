@@ -4,7 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>W3schools</title>
+    <title>Document</title>
+    <link rel="icon" href="w3logoo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
     <style>
         body{
     margin: 0 ;
@@ -36,6 +40,7 @@ display: none;
 }
 .header_subheading:hover{
 background-color: #04aa6d;
+cursor: pointer;
 }
 #header_right_1{
 margin: 17px 32px 17px 32px !important;
@@ -44,14 +49,22 @@ border-radius: 30px;
 position: absolute;
 background: #04aa6d;
 color: white;
+text-decoration: none;
+color: white;
 right: 0px;
 top: 0px;
+}
+#header_right_1:hover{
+    background: #057e51;
+    cursor: pointer;
 }
 #header_right_2{
 margin: 17px 32px 17px 32px !important;
 padding:12px 20px 12px 20px !important;
 border-radius: 30px;
 position: absolute;
+text-decoration: none;
+color: inherit;
 display: none;
 right: 150px;
 top: 0px;
@@ -59,6 +72,7 @@ top: 0px;
 #header_right_2:hover{
 background: #04aa6d;
 color: white;
+cursor: pointer;
 }
 
 @media screen and (max-width:600px){
@@ -100,6 +114,9 @@ color: white;
 #homepage_wholebody{
 }
 
+
+
+
 /********************************************** <!-- body header --> *********************************************/
 #homepage_body_header{
     position:sticky;
@@ -107,12 +124,17 @@ color: white;
     width: 100%;
     display: flex;
     background: #282a35;
+    z-index: 1;
     color: white;
     padding: 0.001px;
 }
 #homepage_body_header a{
     padding: 11.5px 17px 11.5px 17px ;
     display: none;
+    cursor: pointer;
+}
+#homepage_body_header a:hover{
+    background: #131316;
 }
 #homepage_body_header_right_3{
     display: block !important;
@@ -129,6 +151,10 @@ color: white;
     position: absolute;
     right: 0px;
 }
+/* #homepage_body_header_right_1:hover,#homepage_body_header_right_2:hover,#homepage_body_header_right_3:hover{
+    background: transparent !important;
+} */
+
 
 
 @media screen and (max-width:991px) {
@@ -152,12 +178,12 @@ color: white;
     }
 }
 
-@media screen and (min-width:50px) {
+@media screen and (min-width:100px) {
     #homepage_body_header_1{
         display: block !important;
     }
 }
- @media screen and  (min-width:50px) {
+ @media screen and  (min-width:370px) {
     #homepage_body_header_2{
         display: block !important;
     }
@@ -238,10 +264,11 @@ color: white;
     overflow-y: scroll ;
     position: fixed;
     float: left;
-    top: 125px;
+    top: 121px;
     width: 220px;
     height: 92.9% !important;           /*height: 570px;*/
-    background: whitesmoke;
+    background: rgb(214, 212, 212);
+    cursor: pointer;
 
 }
 #navbar div{
@@ -303,13 +330,13 @@ color: white;
 
 #tutorial_body_left{
     float: left;
-    width: 84.5%;
+    width: 82%;
     padding: 15px 0;
     border-right: 1px solid lightgray;
 }
 #tutorial_body_right{
     float: left;
-    width: 12%;
+    width: 15%;
     padding: 15px 1%;
 }
 #footer{
@@ -353,6 +380,10 @@ color: white;
     border-radius: 7px;
     font-weight: 600;
 }
+#tutorial_body_left_buttons div:hover{
+    background: #057e51;
+    cursor: pointer;
+}
 #homebtn{
     float: left;
 }
@@ -377,6 +408,10 @@ color: white;
     border-radius: 7px;
     font-weight: 600;
 }
+#tutorial_body_left_box_1 div:hover{
+background: #057e51;
+cursor: pointer;
+}
 
 #tutorial_body_left_subheadings{
     font-size: 30px;
@@ -390,7 +425,9 @@ color: white;
     padding: 9px 0 9px 25px;
     margin: 0;
 }
-
+#tutorial_body_left_subheadings+p+p{
+    margin-bottom: 45px;
+}
 
 #tutorial_body_left_codecontainer{
     background: whitesmoke;
@@ -426,23 +463,35 @@ color: white;
     border-radius: 7px;
     font-weight: 600;
 }
+#tutorial_body_left_codecontainer_btn:hover{
+    background: #057e51;
+    cursor: pointer;
+}
 #tutorial_body_left_codecontainer_hint{
     font-weight: 600;
     margin-left: 15px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid lightgray;
 }
 
 #tutorial_body_left_subsubheading{
     font-size: 25px;
     margin-left: 25px;
 }
-#tutorial_body_left_paras+hr{
-    width: 90%;
-}
+
 #tutorial_body_left_paras{
     font-size: 15px;
     margin-left: 25px;
     margin:15px 0 20px 25px;
 }
+#tutorial_body_left_paras_last{
+    font-size: 15px;
+    margin-left: 25px;
+    margin:15px 0 20px 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid lightgray;
+}
+
 #tutorial_body_left_advertisement__{
     height: 400px;
 }
@@ -455,6 +504,11 @@ color: white;
     border-radius: 7px;
     font-weight: 600;
 }
+#tutorial_body_left_Exercisebtn:hover{
+        background: #057e51;
+        cursor: pointer;
+    }
+
 #tutorial_body_left_quizbtn{
     background: #2196f3;
     color: white;
@@ -464,9 +518,17 @@ color: white;
     border-radius: 7px;
     font-weight: 600;
 }
+#tutorial_body_left_quizbtn:hover{
+    background: #134d7c;
+    cursor: pointer;
+}
 #tutorial_body_left_links{
     margin-left: 25px;
     text-decoration: underline;
+}
+#tutorial_body_left_links:hover{
+    color:#04aa6d;
+    cursor: pointer;
 }
 #tutorial_body_left_ourcertified_course{
     margin: 30px;
@@ -496,6 +558,10 @@ color: white;
     border-radius: 20px;
     font-weight: 600;
     text-align: center;
+}
+#ourcertified_course_btn:hover{
+    background: #057e51;
+    cursor: pointer;
 }
 @media screen and (max-width:600px) {
     #ourcertified_course_btn{
@@ -567,11 +633,20 @@ color: white;
     font-size: 18px !important;
     font-weight: 300;
 }
+#footer_enddiv_heads:hover{
+    text-decoration: none !important;
+    cursor: none !important;
+}
 #footer_enddiv p{
     margin: 0;
     font-size: 13px;
     text-align: center;
     padding: 0;
+}
+#footer_enddiv p:hover{
+    color:#04aa6d;
+    text-decoration: underline;
+    cursor: pointer;
 }
 #foooter_getcertified{
     background: #282A35;
@@ -583,6 +658,10 @@ color: white;
     border-radius: 5px;
     font-weight: 400;
     text-align: center;
+}
+#foooter_getcertified:hover{
+    background: #18191d;
+    cursor: pointer;
 }
 #footer_end{
     font-size: 13px;
@@ -601,6 +680,97 @@ color: white;
 
 
 
+/* *************************************************  tutorial_body_right  ******************************************* */
+
+#color_picker{
+    text-align: center;
+    margin-top: 85px;
+}
+#color_picker img{
+    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+}
+#color_picker:hover{
+    color: #057e51;
+    cursor: pointer;
+}
+#like_us{
+    text-align: center;
+}
+#like_us img{
+    border-radius: 5px;
+}
+#like_us p,#color_picker p{
+    font-size: 16px;
+}
+#like_us img:hover,#color_picker img:hover{
+    opacity: 0.7;
+}
+#tutorial_body_right_course{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+#tutorial_body_right_course_inner{
+    margin: 0;
+    padding: 0;
+    margin-top: 25px;
+    background: #282A35;
+    color:#FFC0C7;
+    text-align: center;
+    width: 130px;
+    border-radius: 5px;
+}
+#tutorial_body_right_course_inner img:hover{
+    opacity: 0.6;
+}
+#get_started{
+    margin: 0;
+    padding: 5px 0;
+    margin-top: 5px;
+    color: white;
+    background: #04aa6d;
+    width: 100%;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px ;
+}
+#get_started:hover{
+    background: #057e51;
+    cursor: pointer;
+}
+#code_game_container{
+    display: flex;
+    justify-content: center;
+}
+#code_game{
+    background: rgb(150, 212, 212);
+    margin: 0;
+    padding: 0;
+    margin-top: 25px;
+    text-align: center;
+    width: 130px;
+    border-radius: 5px;
+}
+#code_game p{
+    font-size: 16px;
+}
+#code_game img:hover{
+    opacity: 0.6;
+}
+#play_game{
+    margin: 0;
+    padding: 5px 0;
+    margin-top: 5px;
+    color: white;
+    background: #282A35;
+    width: 100%;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px ;
+}
+#play_game:hover{
+    background: #057e51;
+    cursor: pointer;
+}
 
 
     </style>
@@ -612,17 +782,17 @@ color: white;
         <a class="header_subheading" id="Menu">Menu</a>
         <a class="header_subheading" id="tuto">Tutorials</a>
         <a class="header_subheading" id="ref">References</a>
-        <a class="header_subheading" id="ex">Exercises</a>
-        <a  id="header_right_2">Paid Course</a>
-        <a  id="header_right_1"> Log in </a>
+        <a class="header_subheading" id="ex" >Exercises</a>
+        <a  id="header_right_2" href="https://courses.w3schools.com/">Paid Course</a>
+        <a  id="header_right_1" href="loginpage.html"> Log in </a>
     </div>
 
      <!-- whole body of page -->
      <div id="homepage_wholebody">
          <!-- body header -->
          <div id="homepage_body_header">
-             <a id="homepage_body_header_0" onclick="menubar()"> <img src="menubarimg.png" alt=""></a>
-             <a id="homepage_body_header_1"><img src="homeicon.png" alt=""></a>
+             <a id="homepage_body_header_0" onclick="menubar()"> <i class="fa fa-list"></i></a>
+             <a id="homepage_body_header_1"><i class="fa fa-home"></i></a>
              <a id="homepage_body_header_2">HTML</a>
              <a id="homepage_body_header_3">CSS</a>
              <a id="homepage_body_header_4">JAVASCRIPT</a>
@@ -637,11 +807,11 @@ color: white;
              <a id="homepage_body_header_13">C++</a>
              <a id="homepage_body_header_14">C#</a>
              <a id="homepage_body_header_15">R</a>
-             <a id="homepage_body_header_right_3"><img src="modeicon.png" alt=""></a>
-             <a id="homepage_body_header_right_2"><img src="languageicon.png" alt=""></a>
-             <a id="homepage_body_header_right_1"><img src="searchicon.png" alt=""></a>
+             <a id="homepage_body_header_right_3" onclick="mode()"><i class="fa fa-eercast"></i></a>
+             <a id="homepage_body_header_right_2"><i class="fa fa-language"></i></a>
+             <a id="homepage_body_header_right_1"><i class="fa fa-search"></i></a>
          </div>
-            <!-- navbar -->
+         <!-- navbar -->
         <div id="navbar">
 
             <div>
@@ -779,7 +949,7 @@ color: white;
 
         </div>
 
-        <!-- tutorial -->
+          <!-- tutorial -->
         <div id="tutorial_body">
             <div id="tutorial_body_left">
                 <div id="tutorial_body_left_advertisement">
@@ -820,21 +990,21 @@ color: white;
                     <p id="tutorial_body_left_codecontainer_btn">Try it yourself</p>
                 </div>
                 <p id="tutorial_body_left_codecontainer_hint">Click on the "Try it Yourself" button to see how it works.</p>
-                <hr>
+                
                 <p id="tutorial_body_left_subsubheading">CSS Examples</p>
                 <p id="tutorial_body_left_paras">Learn from over 300 examples! With our editor, you can edit the CSS, and click on a button to view the result.</p>
-                <p id="tutorial_body_left_paras">Go to CSS Examples!</p>
-                <hr>
+                <p id="tutorial_body_left_paras_last">Go to CSS Examples!</p>
+                
                 <p id="tutorial_body_left_subsubheading" >Use the Menu</p>
                 <p id="tutorial_body_left_paras">We recommend reading this tutorial, in the sequence listed in the menu.</p>
                 <p id="tutorial_body_left_paras">If you have a large screen, the menu will always be present on the left.</p>
-                <p id="tutorial_body_left_paras">If you have a small screen, open the menu by clicking the top menu sign ☰.</p>
-                <hr>
+                <p id="tutorial_body_left_paras_last">If you have a small screen, open the menu by clicking the top menu sign ☰.</p>
+                
                 <p id="tutorial_body_left_subsubheading" >CSS Templates</p>
                 <p id="tutorial_body_left_paras">We have created some responsive W3.CSS templates for you to use.</p>
                 <p id="tutorial_body_left_paras">You are free to modify, save, share, and use them in all your projects.</p>
-                <p id="tutorial_body_left_paras">Free CSS Templates!</p>
-                <hr>
+                <p id="tutorial_body_left_paras_last">Free CSS Templates!</p>
+                
                 <div id="tutorial_body_left_advertisement__"></div>
                 
                 <p id="tutorial_body_left_subsubheading" >CSS Exercises and Quiz Test</p>
@@ -869,13 +1039,37 @@ color: white;
 
 
             <div id="tutorial_body_right">
+                <div id="color_picker">
+                    <p>COLOR PICKER</p>
+                    <img src="colorpicker.png">
+                </div>
+                <div id="like_us">
+                    <p>LIKE US</p>
+                    <i class="fa fa-facebook-square"></i>
+                    <i class="fa fa-twitter-square"></i>
+                    <i class="fa fa-linkedin-square"></i>
+                </div>
+                <div id="tutorial_body_right_course">
+                    <div id="tutorial_body_right_course_inner">
+                        <p>Get certified by completing a course today!</p>
+                        <img src="w3circle.png">
+                        <p id="get_started">Get Started</p>
+                    </div>
+                </div>
+                <div id="code_game_container">
+                    <div id="code_game">
+                        <p>CODE GAME</p>
+                        <img src="codegame.png">
+                        <p id="play_game">Play game</p>
+                    </div>
+                </div>
             </div>
 
 
             <div id="footer">
                 <div id="footer_advertisement_last"></div>
                 <div id="footer_end_buttons">
-                    <p >Report Error</p>
+                    <p>Report Error</p>
                     <p>Forum</p>
                     <p>About</p>
                     <p>Shop</p>
@@ -954,80 +1148,113 @@ color: white;
     
      </div>
 
-<script>
-    document.addEventListener('scroll',navbarposition);
-window.addEventListener('resize',menubar2);
+    <script>
+        document.addEventListener('scroll',navbarposition);
+        window.addEventListener('resize',menubar2);
 
 
 
 
 
-// *************************************************  set navbar position when scroll *******************************************************************
-function navbarposition(){
-    openorclose=1;    
-    if(window.scrollY<=79){
-        document.getElementById('navbar').setAttribute('style',`top:${126-window.scrollY}px !important`);
-        document.getElementById('homepage_body_header').setAttribute('style','position:static;');
-    }
-    else{
-        document.getElementById('navbar').setAttribute('style',`top:${126-79}px !important`)
-        document.getElementById('homepage_body_header').setAttribute('style','position:fixed;');
-    }
-}
-
-
-
-
-
-
-//******************************************    open navbar onclick   ********************************************************** */
-var openorclose=0;
-function menubar(){
-    if(openorclose==0){
-        if(window.scrollY<79){
-            document.getElementById('navbar').setAttribute('style',`display:block !important;top:${126-window.scrollY}px !important;`);
-            document.getElementById('homepage_body_header').setAttribute('style','position:static;');
+        // *************************************************  set navbar position when scroll *******************************************************************
+        function navbarposition(){
+        openorclose=1;    
+        if(window.scrollY<=79){
+                document.getElementById('navbar').setAttribute('style',`top:${121-window.scrollY}px !important;color:black;background:rgb(214, 212, 212);`);
+                document.getElementById('homepage_body_header').setAttribute('style','position:static;');
         }
         else{
-            document.getElementById("navbar").setAttribute('style',`display:block !important;top:${126-79}px !important;`);
-            document.getElementById('homepage_body_header').setAttribute('style','position:fixed;');
+                document.getElementById('navbar').setAttribute('style',`top:${121-79}px !important;color:black;background:rgb(214, 212, 212);`);
+                document.getElementById('homepage_body_header').setAttribute('style','position:fixed;');
         }
-        // document.getElementById("tutorial_body").setAttribute('style','margin-left:230px !important;max-width:90% !important;min-width:50%; !important')
-        openorclose=1;
-    }
-    else{
-        document.getElementById("navbar").setAttribute('style','display:none !important;');
-        // document.getElementById("tutorial_body").setAttribute('style','margin-left:0px !important;max-width:100% !important;')
-        openorclose=0;
-    }
-}
+        }
 
 
 
 
 
 
-// *************************************       set navbar on resize      ********************************************
-function menubar2(){
-    if(window.innerWidth>991){
-        if(window.scrollY<79){
-            document.getElementById('navbar').setAttribute('style',`display:block !important;top:${126-window.scrollY}px !important;`);
-            document.getElementById('homepage_body_header').setAttribute('style','position:static;');
+        //******************************************    open navbar onclick   ********************************************************** */
+        var openorclose=0;
+        function menubar(){
+        if(openorclose==0){
+            if(window.scrollY<79){
+                document.getElementById('navbar').setAttribute('style',`display:block !important;top:${121-window.scrollY}px !important;color:black;background:rgb(214, 212, 212);`);
+                document.getElementById('homepage_body_header').setAttribute('style','position:static;');
+            }
+            else{
+                document.getElementById('navbar').setAttribute('style',`display:block !important;top:${121-79}px !important;color:black;background:rgb(214, 212, 212);`);
+                document.getElementById('homepage_body_header').setAttribute('style','position:fixed;');
+            }
+            // document.getElementById("tutorial_body").setAttribute('style','margin-left:230px !important;max-width:90% !important;min-width:50%; !important')
+            openorclose=1;
         }
         else{
-            document.getElementById("navbar").setAttribute('style',`display:block !important;top:${126-79}px !important;`);
-            document.getElementById('homepage_body_header').setAttribute('style','position:fixed;');
+            document.getElementById("navbar").setAttribute('style','display:none !important;');
+            // document.getElementById("tutorial_body").setAttribute('style','margin-left:0px !important;max-width:100% !important;')
+            openorclose=0;
         }
-        // document.getElementById("tutorial_body").setAttribute('style','margin-left:230px !important;max-width:90% !important;')
-    }
-    else{
-        document.getElementById("navbar").setAttribute('style','display:none !important;');
-    }
-}
+        }
 
 
 
-</script>
+
+
+
+        // *************************************       set navbar on resize      ********************************************
+        function menubar2(){
+        if(window.innerWidth>991){
+            if(window.scrollY<79){
+                document.getElementById('navbar').setAttribute('style',`display:block !important;top:${121-window.scrollY}px !important;color:black;background:rgb(214, 212, 212);`);
+                document.getElementById('homepage_body_header').setAttribute('style','position:static;');
+            }
+            else{
+                document.getElementById('navbar').setAttribute('style',`display:block !important;top:${121-79}px !important;color:black;background:rgb(214, 212, 212);`);
+                document.getElementById('homepage_body_header').setAttribute('style','position:fixed;');
+            }
+            // document.getElementById("tutorial_body").setAttribute('style','margin-left:230px !important;max-width:90% !important;')
+        }
+        else{
+            document.getElementById("navbar").setAttribute('style','display:none !important;');
+        }
+        }
+
+
+
+
+
+
+
+        // ****************************************  dark and light mode  ******************************************
+        var ab=0;
+        function mode(){
+            console.log("hhh");
+            document.querySelector('#navbar').style.color="black";
+            document.querySelector('#navbar').style.background="rgb(214, 212, 212)";
+            if(ab==0){
+            document.querySelector("#header").setAttribute('style','background: black !important;color:white !important ;'); 
+            document.querySelector("#header a img").setAttribute('src','w3logoo.png');
+            // document.querySelector('#header').setAttribute('style','color:black !important;');
+            document.querySelector("body").setAttribute('style','background: black !important;color:white !important ;'); 
+            document.querySelector('#footer_end_buttons').setAttribute('style','color:black !important ;');
+            document.querySelector('#tutorial_body_left_codecontainer').setAttribute('style','color:black !important;background:gray !important');
+            document.querySelector('#tutorial_body_left_codecontainer_in').setAttribute('style','color:black !important;background:whitesmoke !important');
+            document.querySelector('#footer_logo img').setAttribute('src','w3logoo.png');
+            ab=1;
+            }
+            else{
+            document.querySelector("#header").setAttribute('style','background: white!important;color:black !important ;'); 
+            document.querySelector("#header a img").setAttribute('src','w3logo.png');
+            document.querySelector("body").setAttribute('style','background: white !important;color:black !important ;');
+            document.querySelector('#tutorial_body_left_codecontainer').setAttribute('style','color:black !important;background:whitesmoke !important');
+            document.querySelector('#tutorial_body_left_codecontainer_in').setAttribute('style','color:black !important;background:white !important');
+            document.querySelector('#footer_logo img').setAttribute('src','w3logo.png');
+            ab=0;
+            }
+        }
+    </script>
+
+
 
 </body>
 </html>
