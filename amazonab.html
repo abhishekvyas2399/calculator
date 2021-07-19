@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <style> 
+            body{
+        margin: 0;
+        padding: 0;
+        }
+        /**********************************************************   header of home page   ****************************************************/
+        #grad{
+        background-color:rgb(240, 240, 240);
+        }
+        #responsivehead{
+        display: flex;
+        justify-content: space-between;
+        background-color :rgb(25 23 33);
+        color: whitesmoke;
+        margin: 0;
+        padding: 2px  10px;
+        cursor: pointer;
+        }
+        #address,#sign_in,#rewards,#cart,
+        #address_2,#sign_in_2,#rewards_2,#cart_2{
+        padding-top:5px ;
+        text-decoration: none;
+        color: white;
+        display: none;
+        }
+        #address_2,#sign_in_2,#rewards_2,#cart_2{
+        display: block;
+        }
+        #amazon_logo_header{
+        height: 43px;
+        width:120px;
+        margin-top: 5px; 
+        }
+        #searchbar,
+        #searchbar_2{
+        min-width:40%;
+        max-width: 100%;
+        height: 40px;
+        margin: 5px 3px 12px 3px;
+        display: none;
+        }
+        #searchbar_2{
+        display: flex;
+        margin: 0px;
+        width: 100%;
+        height: 40px;
+        margin:0 15px ;
+        }
+        #searchbarinputbox,
+        #searchbarinputbox_2{
+        height:100%;
+        width: 100%;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        text-decoration: none;
+        }
+        #searchbar button,
+        #searchbar_2 button{
+        background-color: rgb(218 147 29);
+        border-color: transparent;
+        color:black;
+        height: 95%;
+        margin-top: 1.4px;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        }
+
+
+        #responsivehead_2{
+        display: flex;
+        justify-content: space-between;
+        background:rgb(25 23 33);
+        color: whitesmoke;
+        margin: 0;
+        padding: 0;
+        padding: 0 5px;
+        cursor: pointer;
+        border:0px;
+        }
+
+        #responsivehead_3{
+        display: flex;
+        justify-content: space-between;
+        background:rgb(25 23 33);
+        color: whitesmoke;
+        margin: 0;
+        padding: 0;
+        padding: 0 10px;
+        border:0px;
+        cursor: pointer;
+        }
+
+        @media screen and (min-width:990px) {
+        #rewards{
+            display: block;
+        }
+        #rewards_2{
+            display: none;
+        }
+        #address{
+            display: block;
+        }
+        #address_2{
+            display: none;
+        }
+        }
+        @media screen and (min-width:700px) {
+        #sign_in{
+            display: block;
+        }
+        #sign_in_2{
+            display: none;
+        }
+        }
+        @media screen and (min-width:230px) {
+        #cart{
+            display: block;
+        }
+        #cart_2{
+            display: none;
+        }
+        }
+        @media screen and (min-width:560px) {
+        #searchbar{
+            display: flex;
+        }
+        #searchbar_2{
+            display: none;
+        }
+        }
+
+
+        /* ******************************************  subheader of home page   ******************************************** */
+
+
+
+        #header{
+        display: flex;
+        justify-content: space-between;
+        background-color: #232f3e;
+        color: white;
+        font-size: 15px;
+        font-weight: 540;
+        padding: 5px;
+        }
+        #header a{
+        padding: 8px;
+        display: none;
+        text-decoration: none;
+        color: white;
+        }
+        #header_a9{
+        margin:0 !important;
+        padding: 0 !important;
+        text-align: center;
+        }
+
+
+        @media screen and (min-width:991px) {
+        #header_a9{
+            display: block !important;
+        }
+        }
+
+        @media screen and (min-width:800px) {
+        #header_a7{
+            display: block !important;
+        }
+        }
+
+        @media screen and (min-width:700px) {
+        #header_a5{
+            display: block !important;
+        }
+        }
+
+        @media screen and (min-width:600px) {
+        #header_a4{
+            display: block !important;
+        }
+        }
+
+        @media screen and  (min-width:395px) {
+        #header_a3{
+            display: block !important;
+        }
+        }
+
+        @media screen and (min-width:330px) {
+        #header_a2{
+            display: block !important;
+        }
+        }
+
+        @media screen and (min-width:100px) {
+        #header_a8{
+            display: block !important;
+        }
+        }
+
+        @media screen and (min-width:50px) {
+        #header_a6{
+            display: block !important;
+        }
+        }
+
+        @media screen and (min-width:50px) {
+        #header_a1{
+            display: block !important;
+        }
+        }
+
+
+
+
+        /* ********************************************     slider   ***************************************************** */
+        /* slider */
+        #slider{
+        width: 100%;
+        height: 350px;
+        position: relative;
+        }
+        #slider img{
+        width: 100%;
+        position: absolute;
+        min-height: 250px;
+        max-height: 350px;
+        top: 0;
+        left: 0;
+        /* background-size: 100% auto; */
+        /* animation:movein_x 0.6s ease 2.5s  alternate both;; */
+        }
+
+        /* @keyframes movein_x {
+        0%{
+            position: relative;
+            left: 0%;
+            background-position-x: -100%;
+        }
+        100%{
+            position: relative;
+            left: -100%;
+            background-position-x: 0%;
+        }
+        } */
+
+
+
+
+        /* ***********************************   body  of amazon ***************************************** */
+        /* products-container-1 in body  */
+        .product-container{
+        margin: 0;
+        padding: 0;
+        width:100%;
+        }
+        /* maintain the position of product 111111111 */
+        @media screen and (max-width:600px) {
+        .product-container{
+            position: relative;
+            top: -140px;
+        }
+        }
+        @media screen and (max-width:800px) {
+        .product-container{
+            position: relative;
+            top: -80px;
+        }
+        }
+
+        @media screen and (min-width:600px) {
+        .product-container{
+        display: flex;
+        justify-content: space-around;
+        }
+        }
+        @media screen and (min-width:1000px) {
+        .product-container{
+        display: flex;
+        justify-content: space-around;
+        }
+        .row-1{
+        display: flex;
+        justify-content: space-around;
+        }
+        .row-2{
+        display: flex;
+        justify-content: space-around;
+        }
+        }
+        .row-1,.row-2{
+        width: 96%;
+        margin: 2%;
+        }
+        .productimg{
+        width: 94%;
+        height: auto;
+        padding: 1%;
+        margin: 2%;
+        }
+        .product{
+        margin: 3%;
+        width:90%;
+        font-size: 20px;
+        background-color: white;
+        border: 1px solid lightgray;
+        padding: 2%;
+        }
+        .product_text_body{
+        width: 100%;
+        }
+        .product_text_body div div div{
+        font-size: 17px;
+        }
+
+
+        /* maintain the position of product_2222222 */
+        .product-container-2{
+        background-color: white;
+        width: 95%;
+        }
+        .product-container-2-1{
+        display: flex;
+        }
+        .product-container-2-1 div{
+        width: 100%;
+        }
+        .pc2-1-row2, .pc2-1-row1{
+        display: flex;
+        justify-content: space-between;
+        }
+        .product-container-2-1 div div img{
+        width: 92%;
+        height: auto;
+        padding: 4%;
+        }
+        @media screen and (max-width:1202px) {
+        .product-container-2-1{
+            display: block;
+        }
+        .product-container-2-1 div div img{
+            width: 82%;
+            height: auto;
+            padding: 9%;
+        }
+        }
+        @media screen and (max-width:620px) {
+        .product-container-2-1{
+        display: block;
+        }
+        .pc2-1-row2, .pc2-1-row1{
+        display: block;
+        justify-content: space-between;
+        }
+        .product-container-2-1 div div img{
+            width: 76%;
+            height: auto;
+            padding: 9% 5% 9% 19%;
+        }
+        }
+
+
+        /* maintaintain  (++product_22222)product_333333 */
+        .product-container_3{
+        margin: 0;
+        padding: 0;
+        width:100%;
+        }
+        @media screen and (min-width:600px) {
+        .product-container_3{
+        display: flex;
+        justify-content: space-around;
+        }
+        }
+        @media screen and (min-width:1000px) {
+        .product-container_3{
+        display: flex;
+        justify-content: space-around;
+        }
+        }
+
+
+
+        /* ***********************************************  footer  ************************************************* */
+        /*      footer        */
+        .footer{
+        background-color:  #232f3e ;
+        color: whitesmoke;
+        width: 100%;
+        height: auto;
+        }
+        .list{
+        font-size: 14px;
+        padding: 30px 0 0 0;
+        border-bottom: 1px solid rgb(54, 54, 80);
+        width: auto;
+        height: auto;
+        text-align: center;
+        }
+        .list_div{
+        float: left;
+        text-align: center;
+        width: 24%;
+        }
+        .list_div p{
+        list-style-type: none;
+        padding: 3px;
+        }
+        .list-head{
+        font-weight: 600;
+        font-size: 17px;
+        }
+        #footer_img{
+        display: flex; 
+        justify-content: center;
+        padding: 10px;
+        clear: both;
+        border-top:1px solid rgb(54, 54, 80) ;
+        }
+
+        @media screen and (min-width:100px) {
+        .list_div{
+            width: 100% !important;
+        }
+        }
+        @media screen and (min-width:550px) {
+        .list_div{
+            width: 50% !important;
+        }
+        }
+        @media screen and (min-width:991px) {
+        .list_div{
+            width: 24% !important;
+        }
+        }
+
+
+
+
+
+
+
+
+
+
+        .footer-country{
+        display : flex;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        }
+        .footer-country span{
+        padding: 7px;
+        }
+        .list1{
+        padding: 10px;
+        width: 100%;
+        border-top:1px solid rgb(54, 54, 80);
+        }
+        .list1 ul{
+        float: left;
+        width: 20%;
+        }
+        .list1 li{
+        list-style-type: none;
+        font-size: 11px;
+        }
+        @media screen and (min-width:100px) {
+        .list1 ul{
+            width: 50% !important;
+        }
+        }
+        @media screen and (min-width:550px) {
+        .list1 ul{
+            width: 20% !important;
+        }
+        }
+        .list li:hover , .list1 li:hover{
+        text-decoration: underline;
+        }
+        .list1-head{
+        font-weight: 600;
+        font-size: 13px;
+        }
+        .foot{
+        clear: both;
+        background-color:rgb(25 23 33);
+        }
+        </style>
+</head>
+<body id="grad">
+    <!-- ***********************************   header of the page   *******************************   -->
+        <div  id="responsivehead">
+            <a ><img src="amazonlogo.png" id="amazon_logo_header"></a>
+            <a href="amazonregistrationform.html" id="address">Hello <br><font size="4">select your address </font></a>
+            <a id="searchbar"  >
+                    <input type="search"  id="searchbarinputbox">
+                    <button  onclick="openurl()"><span class="glyphicon glyphicon-search"></span></button>
+            </a>
+            <a href="amazonregistrationform.html" id="sign_in">Hello,sign-in <br> <font size="4">Accounts </font></a>
+            <a href="amazonregistrationform.html" id="rewards">returns & <br><font size="4">Rewards </font> </a>
+            <a id="cart"><img src="cart.png" ></a>
+        </div>
+
+        <div  id="responsivehead_2">
+            <a id="searchbar_2"  >
+                    <input type="search"  id="searchbarinputbox_2">
+                    <button  onclick="openurl()"><span class="glyphicon glyphicon-search"></span></button>
+            </a>
+        </div>
+
+        <div  id="responsivehead_3">
+            <a href="amazonregistrationform.html" id="address_2">Hello,select<br><font size="4">your address </font></a>
+            <a href="amazonregistrationform.html" id="sign_in_2">Hello,sign-in <br> <font size="4">Accounts </font></a>
+            <a href="amazonregistrationform.html" id="rewards_2">returns & <br><font size="4">Rewards </font> </a>
+        </div>
+
+
+        <!-- ***********************************    subheader    ******************************************* -->
+        <div id="header">
+            <a id="header_a1">All</a>
+            <a id="header_a2">Best Sellers</a>
+            <a id="header_a3">Mobiles</a>
+            <a id="header_a4">Fashion</a>
+            <a id="header_a5">Electronics</a>
+            <a id="header_a6">Prime</a>
+            <a id="header_a7">New Releases</a>
+            <a id="header_a8">Customer Service</a>
+            <!-- <a id="header_a9">Home</a>
+            <a id="header_a10">Accounts</a>
+            <a id="header_a11">Orders</a>
+            <a id="header_a12">Buy Again</a>
+            <a id="header_a13">Lists</a>  -->
+            <a id="header_a9"> JOIN PRIME NOW | <font size="4"><font color="skyblue ">prime</font> video </font>  <br>*redirects to primevideo.com</a>
+        </div>
+
+
+
+        <!--     slider    -->
+        <div id="slider">
+            <img src="one+.jpg" >
+        </div>
+
+
+
+        <!-- ************************************************  body  of amazon ****************************************************** -->
+        
+        
+        <!-- *************************************************  row 1st of products **************************************-->
+        
+
+        <!-- product container_11111 -->
+        <div  class="product-container" >
+            <div class="row-1">
+             <div class="product">
+                 <div class="product_text_head">
+                     Vega brand day | 11-14th June
+                 </div>
+                 <div class="product_text_body" > 
+                     <div style="display:flex" >
+                         <div style="width: 100%;"> <div><img src="trim.jpg" class="productimg" alt=""></div> <div>Trimmers</div> </div> 
+                         <div style="width: 100%;"> <div><img src="curl hai.jpg" class="productimg" alt=""></div> <div>hait dryer</div> </div>
+                     </div>
+                     <div style="display:flex">
+                         <div style="width: 100%;"><div><img src="hairstraig.jpg"class="productimg" alt=""></div> <div>hair straightners</div> </div> 
+                         <div style="width: 100%;"><div><img src="curl hai.jpg" class="productimg" alt=""></div> <div>hair curler</div> </div>
+                     </div>
+                 </div>
+            </div>
+
+            
+            <div class="product" >
+                 <div class="product_text_head">
+                     Styles for men | up to 70% off
+                 </div>
+                 <div class="product_text_body"> 
+                     <div style="display:flex" >
+                         <div style="width: 100%;"> <div><img src="cloth.jpg" class="productimg" alt=""></div> <div>Clothing</div> </div> 
+                         <div style="width: 100%;"> <div><img src="footwear" class="productimg" alt=""></div> <div>Footwear</div> </div>
+                     </div>
+                     <div style="display:flex">
+                         <div style="width: 100%;"><div><img src="waches" class="productimg" alt=""></div> <div>Watches</div> </div> 
+                         <div style="width: 100%;"><div><img src="bags.jpg" class="productimg" alt=""></div> <div>Bags and luggage</div> </div>
+                     </div>
+                 </div>
+            </div>
+            </div>
+
+
+            <div class="row-2">
+             <div class="product">
+                 <div class="product_text_head">
+                     Styles for women | up to 60% off
+                 </div>
+                 <div class="product_text_body"> 
+                     <div style="display:flex" >
+                         <div style="width: 100%;"> <div><img src="cloth.jpg" class="productimg" alt=""></div> <div>Clothing</div> </div> 
+                         <div style="width: 100%;"> <div><img src="footwear bag.jpg" class="productimg" alt=""></div> <div>Bags and Footwear</div> </div>
+                     </div>
+                     <div style="display:flex">
+                         <div style="width: 100%;"><div><img src="watch.jpg" class="productimg" alt=""></div> <div>Watches</div> </div> 
+                         <div style="width: 100%;"><div><img src="jwellery.jpg" class="productimg" alt=""></div> <div>jwellery</div> </div>
+                     </div>
+                 </div>
+             </div>
+             
+            <div class="product">
+                 <div class="product_text_head">
+                     Birthday Store
+                 </div>
+                 <div class="product_text_body"> 
+                     <div style="display:flex" >
+                         <div style="width: 100%;"> <div><img src="men.jpg" class="productimg" alt=""></div> <div>Gifts for men</div> </div> 
+                         <div style="width: 100%;"> <div><img src="women.jpg" class="productimg" alt=""></div> <div>Gifts for women</div> </div>
+                     </div>
+                     <div style="display:flex">
+                         <div style="width: 100%;"><div><img src="boy.jpg" class="productimg" alt=""></div> <div>Gifts for boys</div> </div> 
+                         <div style="width: 100%;"><div><img src="girl.jpg" class="productimg" alt=""></div> <div>Gifts for girls</div> </div>
+                     </div>
+                 </div>
+             </div>
+            </div>
+        </div>
+
+        <!-- product container_2222 -->
+        <div style="display: flex;justify-content: center;">
+            <div class="product-container-2">
+                <span style="font-size:20px;padding:10px ;">Essentials for Covid</span>
+            <div class="product-container-2-1">
+                <div class="pc2-1-row1">
+                    <div><img src="51N8XhgP1OS._AC_SY200_.jpg" ></div>
+                    <div><img src="4196ojh5j3L._AC_SY200_.jpg" ></div>
+                    <div><img src="41BzNL2R+KL._AC_SY200_.jpg" ></div>
+                </div>
+                <div class="pc2-1-row2">
+                    <div><img src="51-egxwS5OL._AC_SY200_.jpg" ></div>
+                    <div><img src="412z+4nnPdL._AC_SY200_.jpg" ></div>
+                    <div><img src="51Q7R4bnm3L._AC_SY200_.jpg" ></div>
+                </div>
+
+            </div>
+            </div>
+        </div>
+
+         <!-- product container_333 -->
+        <div  class="product-container_3" >
+                    <div class="row-1">
+                     <div class="product">
+                         <div class="product_text_head">
+                             Vega brand day | 11-14th June
+                         </div>
+                         <div class="product_text_body" > 
+                             <div style="display:flex" >
+                                 <div style="width: 100%;"> <div><img src="trim.jpg" class="productimg" alt=""></div> <div>Trimmers</div> </div> 
+                                 <div style="width: 100%;"> <div><img src="hairstraig.jpg" class="productimg" alt=""></div> <div>hait dryer</div> </div>
+                             </div>
+                             <div style="display:flex">
+                                 <div style="width: 100%;"><div><img src="trim.jpg" class="productimg" alt=""></div> <div>hair straightners</div> </div> 
+                                 <div style="width: 100%;"><div><img src="curl hai.jpg" class="productimg" alt=""></div> <div>hair curler</div> </div>
+                             </div>
+                         </div>
+                    </div>
+        
+                    
+                    <div class="product" >
+                         <div class="product_text_head">
+                             Styles for men | up to 70% off
+                         </div>
+                         <div class="product_text_body"> 
+                             <div style="display:flex" >
+                                 <div style="width: 100%;"> <div><img src="cloth.jpg" class="productimg" alt=""></div> <div>Clothing</div> </div> 
+                                 <div style="width: 100%;"> <div><img src="footwear" class="productimg" alt=""></div> <div>Footwear</div> </div>
+                             </div>
+                             <div style="display:flex">
+                                 <div style="width: 100%;"><div><img src="waches" class="productimg" alt=""></div> <div>Watches</div> </div> 
+                                 <div style="width: 100%;"><div><img src="bags.jpg" class="productimg" alt=""></div> <div>Bags and luggage</div> </div>
+                             </div>
+                         </div>
+                    </div>
+                    </div>
+        
+        
+                    <div class="row-2">
+                     <div class="product">
+                         <div class="product_text_head">
+                             Styles for women | up to 60% off
+                         </div>
+                         <div class="product_text_body"> 
+                             <div style="display:flex" >
+                                 <div style="width: 100%;"> <div><img src="cloth.jpg" class="productimg" alt=""></div> <div>Clothing</div> </div> 
+                                 <div style="width: 100%;"> <div><img src="footwear bag.jpg" class="productimg" alt=""></div> <div>Bags and Footwear</div> </div>
+                             </div>
+                             <div style="display:flex">
+                                 <div style="width: 100%;"><div><img src="watch.jpg" class="productimg" alt=""></div> <div>Watches</div> </div> 
+                                 <div style="width: 100%;"><div><img src="jwellery.jpg" class="productimg" alt=""></div> <div>jwellery</div> </div>
+                             </div>
+                         </div>
+                     </div>
+                     
+                    <div class="product">
+                         <div class="product_text_head">
+                             Birthday Store
+                         </div>
+                         <div class="product_text_body"> 
+                             <div style="display:flex" >
+                                 <div style="width: 100%;"> <div><img src="men.jpg" class="productimg" alt=""></div> <div>Gifts for men</div> </div> 
+                                 <div style="width: 100%;"> <div><img src="women.jpg" class="productimg" alt=""></div> <div>Gifts for women</div> </div>
+                             </div>
+                             <div style="display:flex">
+                                 <div style="width: 100%;"><div><img src="boy.jpg" class="productimg" alt=""></div> <div>Gifts for boys</div> </div> 
+                                 <div style="width: 100%;"><div><img src="girl.jpg" class="productimg" alt=""></div> <div>Gifts for girls</div> </div>
+                             </div>
+                         </div>
+                     </div>
+                    </div>
+                </div>
+
+                <!-- **********************************  footer   ************************************* -->
+                       <!-- footer -->
+        <div class="footer">
+            <div class="list">
+            </div>
+            <div class="list_div">
+                <p class="list-head">Get to Know Us</p>
+                <p>About Us</p>
+                <p>Careers</p>
+                <p>Press Releases</p>
+                <p>Amazon Cares</p>
+                <p>Gift a Smile</p>
+            </div>
+            <div class="list_div">
+                <p class="list-head">Connect with Us</p>	
+                <p>Facebook</p>	
+                <p>Twitter</p>	
+                <p>Instagram</p>	
+                <p>Linked In</p>	
+                <p>Telegram</p>	
+            </div>
+            <div class="list_div">
+                <p class="list-head">Make Money with Us</p>
+                <p>Sell on Amazon</p>
+                <p>Sell under Amazon Accelerator</p>
+                <p>Amazon Global Selling</p>
+                <p>Become an Affiliate</p>
+                <p>Fdivfilment by Amazon</p>
+                <p>Advertise Your Products</p>
+                <p>Amazon Pay on Merchants</li>
+            </div>
+            <div class="list_div">
+                <p class="list-head">Let Us Help You</p>	
+                <p>COVID-19 and Amazon</p>	
+                <p>Your Account</p>	
+                <p>Returns Centre</p>	
+                <p>Returns Centre</p>	
+                <p>100% Purchase Protection</p>	
+                <p>Amazon App Download</p>	
+                <p>Amazon Assistant Download</p>	
+                <p>Help</p>
+            </div>
+ 
+            <div id="footer_img"><img src="blueamazonlogo.png" alt=""></div>
+ 
+
+            <div class="footer-country" style="border-bottom: 1px solid rgb(54, 54, 80);">
+                <span>Australia</span>  <span>Brazil</span>  <span>Canada</span> <span>China</span> <span>France</span> <span>Germany</span> <span>Italy</span> <span>Japan</span> <span>Turkey</span> <span>UnitedArab</span> <span>Emirates</span>  <span>United Kingdom</span> 
+            </div>
+            <!-- <span>United States</span> <span>Poland</span> <span>Singapore</span> <span>Spain</span> <span>Mexico</span> <span>Netherlands</span>  -->
+ 
+ 
+ 
+                 <div class="list1">
+                     <ul>
+                         <li class="list1-head">AbeBooks</li>
+                         <li>Books, art</li>
+                         <li>& collectibles</li>
+                     </ul>
+                     <ul>
+                         <li class="list1-head">Amazon Web Services</li>
+                         <li>Scalable Cloud</li>
+                         <li>Computing Services</li>   
+                     </ul>
+                     <ul>
+                         <li class="list1-head">Audible</li>
+                         <li>Download</li>
+                         <li>Audio Books</li>
+                         
+ 
+ 
+                     </ul>
+                     <ul>
+                         <li class="list1-head">DPReview</li>
+                         <li>Digital</li>
+                         <li>Photography</li>
+                     </ul>
+                     <ul>
+                         <li class="list1-head">iMDb</li>
+                         <li>Movies, TV</li>
+                         <li>& Celebrities</li>
+                     </ul>
+ 
+                     <!-- <ul>
+                         <li class="list1-head"></li>
+                         <li></li>
+                         <li></li>
+                     </ul> -->
+                 </div>
+            <div class="footer-country foot">
+             <span>Conditions of Use & Sale</span> <span>Privacy Notice</span> <span>Interest-Based Ads</span> <span>© 1996-2021, Amazon.com, Inc. or its affiliates</span>
+            </div>
+         </div>
+
+        <script>
+        //    ************   slider  **********
+        var slider_images=["one+.jpg","one+bluttothneckband.jpg","mask.png"];
+        var i=0;
+        var slider=document.querySelector('#slider');
+        slides();
+        function slides(){
+        // slider.innerHTML=`<img src="${slider_images[i]}" id="img_animate">`;
+        if(slider.children.length>3){
+        slider.removeChild(slider.children[0]);
+        }
+        i++;
+        if(i>2){i=0;}
+        var slide_img=document.createElement('img');
+        slide_img.src=slider_images[i];
+        slider.appendChild(slide_img);
+        // slider.setAttribute('style',` background-image: url(${slider_images[i]});`);
+        setTimeout(slides,3000);
+        }
+
+
+
+        // *************************   search bar searching   *************************************
+        document.addEventListener('keydown',function(e){
+        if(e.key=="Enter"){
+        openurl();
+        }
+        });
+        function openurl(){
+        var searchstring_2=document.getElementById('searchbarinputbox_2').value;
+        var searchstring=document.getElementById('searchbarinputbox').value;
+        var searchstring_3;
+        if(searchstring==null){
+        searchstring_3=searchstring_2;
+        }
+        else{
+        searchstring_3=searchstring;
+        }
+        searchstring_3="https://www.amazon.in/s/ref=nb_sb_noss?url=search-alias%3Daps&field-keywords="+searchstring_3;
+        window.open(searchstring_3);
+        }
+
+        </script>
+</body>
+</html>
