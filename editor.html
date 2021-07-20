@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #edit_h,#output_{
+            text-align: center;
+            margin-top: 0px;
+            font-size: 20px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        #editor{
+            text-align: center;
+            margin-top: 30px;
+            padding: 40px;
+            background: rgb(214, 213, 213);
+            border-radius: 15px;
+            margin-left: 30px;
+            margin-right: 30px;
+        }
+        #editor textarea{
+            width: 85%;
+            padding: 20px;
+            border: transparent;
+            border-top-left-radius: 15px;
+            border-bottom-left-radius: 15px;
+            border: 1px solid lightgray;
+            border-left: 5px solid #04aa6d;
+            background: rgb(39, 37, 37);
+            color: whitesmoke;
+            box-shadow: 0 0 10px black;
+        }
+        #output_screen{
+            padding: 30px;
+            text-align: left;
+            margin: 30px;
+            border: 1px solid lightgray;
+        }
+        #run {
+            margin-top: 10px;
+            text-align: center;
+        }
+        #run button{
+            border: transparent;
+            border-radius: 10px;
+            padding: 10px 100px;
+            background:  #04aa6d;
+        }
+        #output_screen{
+            box-shadow: 0 0 10px black;
+        }
+        #content{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+        @media screen and (max-width:991px) {
+            #content{
+            display: grid;
+            grid-template-columns: 1fr;
+           }
+        }
+        @media screen and (max-width:450px) {
+            #editor{
+               padding: 20px 10px;
+               margin-left: 0px;
+               margin-right: 0px;
+            }
+        }
+    </style>
+</head>
+<body>
+            <!--   header   -->
+    <div id="header"> 
+        <a> <img src="w3logo.png" > </a>
+    </div>
+    <div id="content">
+        <div id="left">
+            <div id="edit_h">Editor</div>
+            <div id="editor">
+                <textarea name="edit"  rows="20" id="edits">
+    &#60style&#62
+        h1 {
+        text-align: center;
+        }
+        p{
+        font-family: verdana;
+        font-size: 20px;
+        }
+    &#60/style&#62
+    &#60body&#62
+        &#60h1&#62
+            heading..1
+        &#60/h1&#62                
+        &#60p&#62
+            paragraph
+        &#60/p&#62
+
+    &#60/body&#62
+                </textarea>
+            </div>
+            <div id="run">
+                <button type="button" onclick="output()">RUN</button>
+            </div>
+        </div>
+        <div id="right">
+            <div id="output_">
+                OUTPUT
+            </div>
+            <div id="output_screen">
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        var styletag=document.querySelector('style').innerText;
+        function output(){
+            var code="";
+            code=document.querySelector("#editor textarea").value;
+
+            // fetching style from the editor and add it to the page 
+            var stylestart=code.search("<style>");
+            var styleend=code.search("</style>");
+            stylestart+=7;
+            var style=code.substring(stylestart,styleend);
+            var styles=styletag+style;
+            console.log(styles);
+            document.querySelector('style').innerText=styles;
+            // fetching html from the editor and add it to the page 
+            var htmlstart=code.search("<body>");
+            var htmlend=code.search("</body>");
+            htmlstart+=6;
+            var html=code.substring(htmlstart,htmlend);
+            console.log(html);
+            document.querySelector('#output_screen').innerHTML=html;
+            // 
+        }
+    </script>
+</body>
+</html>
