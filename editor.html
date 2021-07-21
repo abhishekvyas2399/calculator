@@ -38,6 +38,9 @@
             text-align: left;
             margin: 30px;
             border: 1px solid lightgray;
+            box-shadow: 0 0 10px black;
+            width: 80%;
+            height: 69%;
         }
         #run {
             margin-top: 10px;
@@ -49,9 +52,6 @@
             padding: 10px 100px;
             background:  #04aa6d;
         }
-        #output_screen{
-            box-shadow: 0 0 10px black;
-        }
         #content{
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -61,6 +61,10 @@
             display: grid;
             grid-template-columns: 1fr;
            }
+           #output_screen{
+               height: 150%;
+           }
+
         }
         @media screen and (max-width:450px) {
             #editor{
@@ -81,9 +85,16 @@
             <div id="edit_h">Editor</div>
             <div id="editor">
                 <textarea name="edit"  rows="20" id="edits">
+    &#60!DOCTYPE html&#62
+    &#60html lang="en"&#62
+    &#60head&#62
+        &#60meta charset="UTF-8"&#62
+        &#60meta http-equiv="X-UA-Compatible" content="IE=edge"&#62
+        &#60meta name="viewport" content="width=device-width, initial-scale=1.0"&#62
     &#60style&#62
         h1 {
         text-align: center;
+        color:red;
         }
         p{
         font-family: verdana;
@@ -99,6 +110,7 @@
         &#60/p&#62
 
     &#60/body&#62
+    &#60/html&#62
                 </textarea>
             </div>
             <div id="run">
@@ -109,33 +121,20 @@
             <div id="output_">
                 OUTPUT
             </div>
-            <div id="output_screen">
-            </div>
+            <iframe id="output_screen">
+            </iframe>
         </div>
     </div>
 
 
     <script>
-        var styletag=document.querySelector('style').innerText;
         function output(){
             var code="";
             code=document.querySelector("#editor textarea").value;
-
-            // fetching style from the editor and add it to the page 
-            var stylestart=code.search("<style>");
-            var styleend=code.search("</style>");
-            stylestart+=7;
-            var style=code.substring(stylestart,styleend);
-            var styles=styletag+style;
-            console.log(styles);
-            document.querySelector('style').innerText=styles;
-            // fetching html from the editor and add it to the page 
-            var htmlstart=code.search("<body>");
-            var htmlend=code.search("</body>");
-            htmlstart+=6;
-            var html=code.substring(htmlstart,htmlend);
-            console.log(html);
-            document.querySelector('#output_screen').innerHTML=html;
+            var doc=document.getElementById('output_screen').contentWindow.document;
+            doc.open();
+            doc.write(code);
+            doc.close();
             // 
         }
     </script>
